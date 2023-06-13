@@ -18,6 +18,7 @@ if($_POST){
             $location = "login.php";
             header("Location:$location");
         }
+        
     }
     if($_POST['operation'] == 'login'){
         $email = $_POST['email'];
@@ -27,9 +28,17 @@ if($_POST){
 
         $result = mysqli_query($conn,$sql);
         while($row = mysqli_fetch_assoc($result)){
+            $_SESSION['name'] = "name";
+            $_SESSION['password'] = "password";
             $location = "todo.php";
             header("Location:$location");
         }
+    }
+    if($_POST['operation'] == 'logout'){
+        session_unset();
+        session_destroy();
+        $location = "login.php";
+        header("Location:$location");
     }
 }
 
