@@ -19,6 +19,18 @@ if($_POST){
             header("Location:$location");
         }
     }
+    if($_POST['operation'] == 'login'){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "select * from student where email='".$email."' and password='".$password."'";
+
+        $result = mysqli_query($conn,$sql);
+        while($row = mysqli_fetch_assoc($result)){
+            $location = "todo.php";
+            header("Location:$location");
+        }
+    }
 }
 
 
