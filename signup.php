@@ -113,7 +113,7 @@
                     </tr>
                 </table>
                 <!-- <br><br> -->
-                <input type="submit" value="SIGNUP" name="operation" class="btn">
+                <input type="submit" value="signup" name="operation" class="btn">
             </form>
         </div>
     </center>

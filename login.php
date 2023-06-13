@@ -99,7 +99,7 @@ session_start();
                     </tr>
                 </table>
                 <!-- <br><br> -->
-                <input type="submit" value="LOGIN" name="operation" class="btn">
+                <input type="submit" value="login" name="operation" class="btn">
             </form>
         </div>
     </center>
